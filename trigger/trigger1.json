@@ -1,0 +1,25 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "salespl",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/kirancont/blobs/",
+			"blobPathEndsWith": "Sales.csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/0e61f80d-8674-408f-87c3-0b69f8eb3c56/resourceGroups/kiranrg/providers/Microsoft.Storage/storageAccounts/kiransac",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
